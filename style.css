@@ -98,6 +98,14 @@ header a{
     font-style: normal;
     
 }
+@media (max-width: 600px) {
+    header{
+        gap: 0px;
+    }
+    header a{
+        font-size: 18px;
+    }
+
 .sc1{
     display: flex;
     justify-content: center;
