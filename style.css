@@ -17,6 +17,14 @@ html{
     -ms-user-select: none;
     scroll-behavior: smooth;
 }
+img{
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
 *{
     margin: 0;
     padding: 0;
@@ -289,6 +297,7 @@ header a{
     justify-content: center;
     gap: 5px;
     margin-top: 20px;
+    cursor: pointer;
     
 }
 
@@ -308,6 +317,12 @@ header a{
     padding: 0px 10px 30px 10px;
     overflow: hidden;
 
+}
+.token:hover,
+.tok3:hover,
+.tok4:hover{
+    background-image: url(Effect.svg);
+    background-size: cover;
 }
 
 @media (max-width: 780px) {
