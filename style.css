@@ -64,7 +64,7 @@ img{
 
 @font-face {
     font-family: turtles;
-    src: url(/fonts/Turtles.otf/)format("otf"), url(/fonts/Turtles.woff/) format("woff");
+    src: url(/dinocryptotemplate/fonts/Turtles.otf/)format("otf"), url(dinocryptotemplate/fonts/Turtles.woff/) format("woff");
     font-weight: normal;
     font-style: normal;
 }
