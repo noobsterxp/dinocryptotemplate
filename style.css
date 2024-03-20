@@ -17,6 +17,9 @@ html{
     -ms-user-select: none;
     scroll-behavior: smooth;
 }
+body, html {
+    user-select: none;
+}
 img{
     user-drag: none;
     -webkit-user-drag: none;
