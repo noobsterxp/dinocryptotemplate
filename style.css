@@ -1,0 +1,539 @@
+:root {
+    --step--2: clamp(0.5208rem, 0.4237rem + 0.4855vi, 0.8rem);
+    --step--1: clamp(0.625rem, 0.4946rem + 0.6522vi, 1rem);
+    --step-0: clamp(0.75rem, 0.5761rem + 0.8696vi, 1.25rem);
+    --step-1: clamp(0.9rem, 0.6696rem + 1.1522vi, 1.5625rem);
+    --step-2: clamp(1.08rem, 0.7763rem + 1.5185vi, 1.9531rem);
+    --step-3: clamp(1.296rem, 0.8976rem + 1.992vi, 2.4414rem);
+    --step-4: clamp(1.5552rem, 1.0347rem + 2.6027vi, 3.0518rem);
+    --step-5: clamp(1.8662rem, 1.1885rem + 3.3886vi, 3.8147rem);
+}
+html{
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes fade-in {
+    from {scale: .9; opacity: 0.5;}
+    to {scale: 1; opacity: 1;}}
+    
+    @keyframes slide {
+        100% { left: 0; }
+    }
+    
+    
+    
+    
+    .cointainer,
+    h2,
+    h3,
+    h4,
+    h5,
+    p,
+    .token,
+    
+    
+    
+    .tok4,
+    .token2,
+    .tokeno,
+    .oxd{
+        animation: fade-in linear;
+        animation-timeline: view();
+        animation-range-start: 0 ;
+        animation-range-end: 250px;
+    }
+    
+
+@font-face {
+    font-family: turtles;
+    src: url(fonts/Turtles.otf)format("otf"), url(fonts/Turtles.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:row;
+    gap: 10px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    padding: 15px;
+    position: sticky;
+    top: 0px;
+    display: flex;
+align-items: center;
+justify-content: center;
+z-index: 9999;
+background-color: #0cc0df;
+font-family: turtles;
+border-bottom: 1px solid rgba(255, 255, 255, 0.507);
+}
+
+header a{
+    font-size: 20px;
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.925);
+    text-decoration: none;
+    font-family: turtles;
+    font-weight: normal;
+    font-style: normal;
+    
+}
+.sc1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+
+}
+.one{
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.one h1{
+    font-family: turtles;
+    color: white;
+    font-size: 100px;
+    text-align: center;
+}
+.one p{
+    font-family: sans-serif;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+}
+#bild{
+    position: relative;
+    z-index: 9;
+    height: 200px;
+    width: 200px;
+
+
+  }
+.backwrap {
+    
+    /* Old browsers */
+    background-image: url("kgroun.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    aspect-ratio: 16/9;
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 0;
+  }
+  @media (max-width: 1000px) {
+    main{
+        background-image: url(Design\ ohne\ Titel.svg);
+        z-index: 99;
+    }
+   .backwrap{
+    background-image: none;
+    background: none;
+
+    }
+
+  }
+  @media (min-width: 1000px) {
+    .sc1{
+        background-color: #0cc0df;
+
+    }
+    .one{
+        gap: 60px;
+    }
+}
+
+  /* Shapes & Animation
+  */
+  .back-shapes {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .back-shapes img {
+    opacity: 0.2;
+    position: absolute;
+    width: 1.5%;
+    z-index: 0;
+  }
+  
+  .floating {
+    position: relative;
+    animation-name: floating;
+    -webkit-animation-name: floating;
+    animation-duration: 5s;
+    -webkit-animation-duration: 5s;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    z-index: 0;
+  }
+  .floating.circle {
+    display: inline-block;
+    width: 39px;
+    height: 39px;
+    background-image: url("shower.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 0;
+    opacity: 0.5;
+  }
+  .floating.square {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-image: url("music.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.5;
+    z-index: 0;
+  }
+  .floating.triangle {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-image: url("crying.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.5;
+    z-index: 0;
+  }
+  .floating.cross {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-image: url("dizzy.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.5;
+    z-index: 0;
+  }
+  
+  @keyframes floating {
+    0% {
+      transform: translateY(0%) rotate(-55deg);
+    }
+    50% {
+      transform: translateY(300%) rotate(55deg);
+    }
+    100% {
+      transform: translateY(0%) rotate(-55deg);
+    }
+  }
+  @-webkit-keyframes floating {
+    0% {
+      -webkit-transform: translateY(0%);
+    }
+    50% {
+      -webkit-transform: translateY(300%);
+    }
+    100% {
+      -webkit-transform: translateY(0%);
+    }
+  }
+
+  .tokenomics{
+    margin-top: -10px;
+    background-image: url("image.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    background-size: 100% 100%;
+    width: 100%;
+    ;
+    position: relative;
+    left: 0;
+    
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column ;
+  }
+  #btn{
+    color: rgb(255, 255, 255, 0.9);
+    width: 120px;
+    height: 40px;
+    border: 1px solid rgba(95, 93, 93, 0.3);
+    border-width: 0.01em;
+    background-color: #0cbfdf6e;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 20px;
+    
+}
+
+.token{
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 0px 30px 0px;
+    flex-direction: row;
+    width: 90%;
+    height: 300px;
+    background-color: rgba(37, 37, 37, 0.3);;
+    border: 1px solid rgba(63, 63, 63, 0.274);
+    border-radius: 5px;
+    gap: 20px;
+    padding: 0px 10px 30px 10px;
+    overflow: hidden;
+
+}
+
+@media (max-width: 780px) {
+    .tokenomics {
+      flex-direction: column;
+      height: 1200px;
+      margin: 0px 0px 30px 0px;
+      padding: 0p;
+      gap: 0;
+      display: flex;
+      
+    }
+    .token {
+        flex-direction: column;
+        height:400px;
+        margin: 0px 0px 30px 0px;
+        padding: 0p;
+        gap: 0;
+        display: inline-block;
+        
+      }
+    .tok2{
+        text-align: left;
+        padding: 0px;
+        margin: 0px ;
+
+    }
+    .tok1{
+        text-align: left;
+        padding-left: 10px;
+        margin: 0px;
+    }
+
+    .tok1 p{
+        width: 50vw;
+    }
+    .tok2 p{
+        width: 80vw
+    }
+  }
+
+.tok2 p{
+    color: rgba(216, 216, 216, 0.8);
+    font-size: var(--step-0);
+    font-family: sans-serif;
+}
+.tok1 h4{
+    font-family: turtles;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: var(--step-1);
+    letter-spacing: 3px;
+}
+.tok1 p{
+    color:rgba(216, 216, 216, 0.8);
+    font-size: var(--step-0);
+    font-family: sans-serif;
+    
+}
+
+.tok1{
+    width: 40%;
+
+}
+.tok2{
+    padding-left: 10px;
+    width: 60%;
+    
+}
+
+.token2{
+    display: flex;
+    margin: 0;
+    padding: 0;
+     width: 90%;
+    white-space: nowrap;
+    gap: 20px;
+    height: fit-content;
+    flex-direction: row;
+}
+.tokeno{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 300px;
+    width: 100%;
+    margin: 0;
+}
+
+.tok3 {
+    height: 90%;
+    width: 100%;
+    background-color: rgba(37, 37, 37, 0.3);;
+    border: 1px solid rgba(63, 63, 63, 0.274);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.tok3 p{
+    font-size: 12px;
+    padding-top: 10px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: sans-serif;
+}
+.tok3 h5{
+    font-family: turtles;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+.tok4 {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(37, 37, 37, 0.3);;
+    border: 1px solid rgba(63, 63, 63, 0.274);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.tok4 p{
+    font-size: 12px;
+    padding-top: 10px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: sans-serif;
+}
+.tok4 h5{
+    font-family: turtles;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+
+@media (max-width: 780px) {
+    .token2 {
+      flex-direction: column;
+      gap: 20px;
+      height: 670px;
+      margin-bottom: 20px;
+    }
+    .tok3{
+        width: 100%;
+        height: 100px;
+    }
+    .tok4{
+        width: 100%;
+        height: 180px;
+    }
+    .tokeno{
+        gap: 20px;
+    }
+}
+
+
+.frame {
+    padding-top: 100px;
+    margin-top: -2px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0px solid rgba(0, 0, 0, 0);
+    
+    padding-top: 0px;
+    overflow: hidden;
+    /* Old browsers */
+    background-image: url("kgroun.svg");
+    ;
+}
+@media (max-width: 1000px) {
+    .frame{
+        background-color: none;
+    }
+    .sc1{
+        padding-bottom: 30px;
+    }
+    .tokenomics{
+        background-image: none;
+    }
+    
+    
+    
+  }
+
+.cointainer{
+    
+    width: 100%;
+    height: 100%;
+
+    
+ }
+
+  #dexscreener-embed{
+    padding-top: 100px;
+    display: inline-block;
+    position:relative;
+    width:100%;
+    height: 100%;
+    }@media(min-width:2000px)
+    {
+    #dexscreener-embed{
+        padding-bottom:100%;}}
+    #dexscreener-embed iframe{
+        position:relative;
+        width:80vw;
+        height:80vh;
+        margin: none;
+        top:0;
+        left:0;
+        border:0;
+        z-index: 1;
+        overflow: hidden;
+        border: 10px solid rgba(255, 255, 255, 0.8);
+        padding-top: -100px;
+        border-radius: 10px;
+    }
+
+
+
+    
