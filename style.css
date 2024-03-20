@@ -511,6 +511,14 @@ header a{
     background-image: url("kgroun.svg");
     ;
 }
+.frame h5{
+    padding-top: 25px;
+    'Turtles', sans-serif;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 40px;
+    letter-spacing: 2px;
+
+}
 @media (max-width: 1000px) {
     .frame{
         background-color: none;
@@ -521,7 +529,9 @@ header a{
     .tokenomics{
         background-image: none;
     }
-    
+    .frame h5{
+        font-size: 20px;
+    }
     
     
   }
