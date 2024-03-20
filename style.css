@@ -513,7 +513,7 @@ header a{
 }
 .frame h5{
     padding-top: 25px;
-    'Turtles', sans-serif;
+    font-family: 'Turtles', sans-serif;
     color: rgba(255, 255, 255, 0.85);
     font-size: 40px;
     letter-spacing: 2px;
