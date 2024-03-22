@@ -18,6 +18,9 @@ html{
     -ms-user-select: none;
     scroll-behavior: smooth;
 }
+}    
+
+@import url('https://fonts.cdnfonts.com/css/turtles');
 img{
     user-drag: none;
     -webkit-user-drag: none;
@@ -110,7 +113,7 @@ img{
     
 
 @font-face {
-    font-family: turtles;
+    font-family: 'Turtles', sans-serif;
     src: url(fonts/Turtles.otf)format("otf"), url(fonts/Turtles.woff) format("woff");
     font-weight: normal;
     font-style: normal;
@@ -131,7 +134,7 @@ align-items: center;
 justify-content: center;
 z-index: 9999;
 background-color: #0cc0df;
-font-family: turtles;
+font-family: 'Turtles', sans-serif;
 border-bottom: 1px solid rgba(255, 255, 255, 0.507);
 
 }
@@ -141,7 +144,7 @@ header a{
     padding: 10px;
     color: rgba(255, 255, 255, 0.925);
     text-decoration: none;
-    font-family: turtles;
+    font-family: 'Turtles', sans-serif;
     font-weight: normal;
     font-style: normal;
     text-shadow: -2px -2px 0 rgba(1, 96, 116, 1),
@@ -184,7 +187,7 @@ header a{
 }
 
 .one h1{
-    font-family: turtles;
+    font-family: 'Turtles', sans-serif;
     color: white;
     font-size: 100px;
     text-align: center;
@@ -449,7 +452,7 @@ header a{
     font-family: sans-serif;
 }
 .tok1 h4{
-    font-family: turtles;
+    font-family: 'Turtles', sans-serif;
     color: rgba(255, 255, 255, 0.95);
     font-size: var(--step-1);
     letter-spacing: 2px;
@@ -519,7 +522,7 @@ header a{
     font-family: sans-serif;
 }
 .tok3 h5{
-    font-family: turtles;
+    font-family:'Turtles', sans-serif;
     margin: 0;
     color: rgba(255, 255, 255, 0.9);
     font-size: 1.2rem;
@@ -553,7 +556,7 @@ header a{
     font-family: sans-serif;
 }
 .tok4 h5{
-    font-family: turtles;
+    font-family: 'Turtles', sans-serif;
     margin: 0;
     color: rgba(255, 255, 255, 0.9);
     font-size: 1.2rem;
@@ -608,7 +611,7 @@ header a{
 }
 .frame h5{
     padding-top: 100px;
-    font-family: turtles;
+    font-family: 'Turtles', sans-serif;
     color: rgba(255, 255, 255, 0.9);
     text-shadow: -2px -2px 0 rgba(1, 96, 116, 1),
     2px -2px 0 rgba(1, 96, 116, 1),
@@ -769,7 +772,7 @@ padding-top: 100px;
 padding-bottom: 0px;
 }
 .scb h2{
-    font-family: turtles;
+    font-family: 'Turtles', sans-serif;
     color: rgba(255, 255, 255, 1);
     text-align: center;
     font-size: 70px;
