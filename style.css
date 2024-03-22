@@ -880,7 +880,7 @@ padding-bottom: 0px;
        grid-template-columns: 1fr 1fr;
         height:120vh;
         overflow: hidden;
-        justify-content: center;
+        justify-items: center;
         align-items: center;
 
 
@@ -978,7 +978,7 @@ padding-bottom: 0px;
 }
 #wdw4{
     right: 30px;
-    bottom: 100px;
+    bottom: 0px;
 }
 }
 .frame{
