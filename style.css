@@ -4,9 +4,10 @@
     --step-0: clamp(0.75rem, 0.5761rem + 0.8696vi, 1.25rem);
     --step-1: clamp(0.9rem, 0.6696rem + 1.1522vi, 1.5625rem);
     --step-2: clamp(1.08rem, 0.7763rem + 1.5185vi, 1.9531rem);
-    --step-3: clamp(1.296rem, 0.8976rem + 1.992vi, 2.4414rem);
+    --step-3: clamp(1.4rem, 0.7763rem + 1.5185vi, 1.5531rem);
     --step-4: clamp(1.5552rem, 1.0347rem + 2.6027vi, 3.0518rem);
     --step-5: clamp(1.8662rem, 1.1885rem + 3.3886vi, 3.8147rem);
+    --step-1-1: clamp(0.9rem, 0.3496rem + 1.1522vi, 1.5625rem);
 }
 html{
     user-drag: none;
@@ -16,10 +17,6 @@ html{
     -webkit-user-select: none;
     -ms-user-select: none;
     scroll-behavior: smooth;
-    
-}
-body, html {
-    user-select: none;
 }
 img{
     user-drag: none;
@@ -28,7 +25,9 @@ img{
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-    -webkit-touch-callout: none;
+ 
+        -webkit-touch-callout: none;
+    
 }
 *{
     margin: 0;
@@ -39,12 +38,35 @@ img{
     from {scale: .9; opacity: 0.5;}
     to {scale: 1; opacity: 1;}}
     
-    @keyframes slide {
-        100% { left: 0; }
+    @keyframes bounce {
+        0%{
+            opacity: 0;
+        webkit-transform: scale(0.3);
+    -ms-transform: scale(0.3);
+    transform: scale(0.3);
+        }
+        50%{
+            opacity: 1;
+        webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+        }
+        70%{
+       
+        webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+        }
+        
     }
     
     
-    
+    .wdw{
+        animation-name: bounce;
+        animation-delay: 1s;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+    }
     
     .cointainer,
     h2,
@@ -65,7 +87,7 @@ img{
         animation-range-start: 0 ;
         animation-range-end: 250px;
     }
-
+    
     @media (max-width: 600px){
         .cointainer,
         h2,
@@ -83,10 +105,16 @@ img{
             animation-range-start: 0 ;
             animation-range-end: 35%;
         }
-    }    
+    }
+   
+    
 
-@import url('https://fonts.cdnfonts.com/css/turtles');
-
+@font-face {
+    font-family: turtles;
+    src: url(fonts/Turtles.otf)format("otf"), url(fonts/Turtles.woff) format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
 header{
     display: flex;
     align-items: center;
@@ -103,8 +131,9 @@ align-items: center;
 justify-content: center;
 z-index: 9999;
 background-color: #0cc0df;
-font-family: 'Turtles', sans-serif;
+font-family: turtles;
 border-bottom: 1px solid rgba(255, 255, 255, 0.507);
+
 }
 
 header a{
@@ -112,17 +141,29 @@ header a{
     padding: 10px;
     color: rgba(255, 255, 255, 0.925);
     text-decoration: none;
-    font-family: 'Turtles', sans-serif;
+    font-family: turtles;
     font-weight: normal;
     font-style: normal;
+    text-shadow: -2px -2px 0 rgba(1, 96, 116, 1),
+    2px -2px 0 rgba(1, 96, 116, 1),
+    -2px 2px 0 rgba(1, 96, 116, 1),
+    2px 2px 0 rgba(1, 96, 116, 1),
+    -3px 0 0 rgba(1, 96, 116, 1),
+    3px 0 0 rgba(1, 96, 116, 1),
+    0 -3px 0 rgba(1, 96, 116, 1),
+    0 3px 0 rgba(1, 96, 116, 1);
     
 }
+
 @media (max-width: 600px) {
     header{
         gap: 0px;
     }
     header a{
         font-size: 18px;
+    }
+    .tok1 p{
+        padding-bottom: 20px;
     }
 }
 .sc1{
@@ -143,10 +184,18 @@ header a{
 }
 
 .one h1{
-    font-family: 'Turtles', sans-serif;
+    font-family: turtles;
     color: white;
     font-size: 100px;
     text-align: center;
+    text-shadow: -2px -2px 0 rgba(1, 96, 116, 1),
+    2px -2px 0 rgba(1, 96, 116, 1),
+    -2px 2px 0 rgba(1, 96, 116, 1),
+    2px 2px 0 rgba(1, 96, 116, 1),
+    -3px 0 0 rgba(1, 96, 116, 1),
+    3px 0 0 rgba(1, 96, 116, 1),
+    0 -3px 0 rgba(1, 96, 116, 1),
+    0 3px 0 rgba(1, 96, 116, 1);
 }
 .one p{
     font-family: sans-serif;
@@ -298,7 +347,6 @@ header a{
     background-image: url("image.webp");
     background-size: cover;
     background-repeat: no-repeat;
-    padding-bottom: 100px;
     
     background-size: 100% 100%;
     width: 100%;
@@ -311,6 +359,7 @@ header a{
     align-items: center;
     justify-content: center;
     flex-direction:column ;
+    padding-bottom: 100px;
   }
   #btn{
     color: rgb(255, 255, 255, 0.9);
@@ -351,6 +400,8 @@ header a{
 .tok4:hover{
     background-image: url(Effect.svg);
     background-size: cover;
+    background-position: center center;
+    transition: 0.5s;
 }
 
 @media (max-width: 780px) {
@@ -398,10 +449,19 @@ header a{
     font-family: sans-serif;
 }
 .tok1 h4{
-    font-family: 'Turtles', sans-serif;
+    font-family: turtles;
     color: rgba(255, 255, 255, 0.95);
     font-size: var(--step-1);
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+    text-shadow: -2px -2px 0 rgb(0, 0, 0),
+    2px -2px 0 rgb(0, 0, 0),
+    -2px 2px 0 rgba(0, 0, 0),
+    2px 2px 0 rgba(0, 0, 0),
+    -3px 0 0 rgba(0, 0, 0),
+    3px 0 0 rgba(0, 0, 0),
+    0 -3px 0 rgba(0, 0, 0),
+    0 3px 0 rgba(0, 0, 0);
+    
 }
 .tok1 p{
     color:rgba(216, 216, 216, 0.8);
@@ -459,11 +519,19 @@ header a{
     font-family: sans-serif;
 }
 .tok3 h5{
-    font-family: 'Turtles', sans-serif;
+    font-family: turtles;
     margin: 0;
     color: rgba(255, 255, 255, 0.9);
     font-size: 1.2rem;
     letter-spacing: 2px;
+    text-shadow: -2px -2px 0 rgba(1, 96, 116, 1),
+    2px -2px 0 rgba(1, 96, 116, 1),
+    -2px 2px 0 rgba(1, 96, 116, 1),
+    2px 2px 0 rgba(1, 96, 116, 1),
+    -3px 0 0 rgba(1, 96, 116, 1),
+    3px 0 0 rgba(1, 96, 116, 1),
+    0 -3px 0 rgba(1, 96, 116, 1),
+    0 3px 0 rgba(1, 96, 116, 1);
 }
 .tok4 {
     height: 100%;
@@ -485,11 +553,19 @@ header a{
     font-family: sans-serif;
 }
 .tok4 h5{
-    font-family: 'Turtles', sans-serif;
+    font-family: turtles;
     margin: 0;
     color: rgba(255, 255, 255, 0.9);
     font-size: 1.2rem;
     letter-spacing: 2px;
+    text-shadow: -2px -2px 0 rgba(1, 96, 116, 1),
+    2px -2px 0 rgba(1, 96, 116, 1),
+    -2px 2px 0 rgba(1, 96, 116, 1),
+    2px 2px 0 rgba(1, 96, 116, 1),
+    -3px 0 0 rgba(1, 96, 116, 1),
+    3px 0 0 rgba(1, 96, 116, 1),
+    0 -3px 0 rgba(1, 96, 116, 1),
+    0 3px 0 rgba(1, 96, 116, 1);
 }
 
 
@@ -515,24 +591,33 @@ header a{
 
 
 .frame {
-    padding-top: 100px;
-    margin-top: -2px;
+    padding-top: 0px;
+    margin-top: -80px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     border: 0px solid rgba(0, 0, 0, 0);
-    
     padding-top: 0px;
     overflow: hidden;
     /* Old browsers */
-    background-image: url("kgroun.svg");
-    ;
+    background-image: url("");
+    background-position: bottom;
+    
 }
 .frame h5{
-    padding-top: 25px;
-    font-family: 'Turtles', sans-serif;
-    color: rgba(255, 255, 255, 0.85);
+    padding-top: 100px;
+    font-family: turtles;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: -2px -2px 0 rgba(1, 96, 116, 1),
+    2px -2px 0 rgba(1, 96, 116, 1),
+    -2px 2px 0 rgba(1, 96, 116, 1),
+    2px 2px 0 rgba(1, 96, 116, 1),
+    -3px 0 0 rgba(1, 96, 116, 1),
+    3px 0 0 rgba(1, 96, 116, 1),
+    0 -3px 0 rgba(1, 96, 116, 1),
+    0 3px 0 rgba(1, 96, 116, 1);
     font-size: 40px;
     letter-spacing: 2px;
 
@@ -547,15 +632,12 @@ header a{
     .tokenomics{
         background-image: none;
     }
-    .frame h5{
-        font-size: 20px;
-    }
+    
     
     
   }
 
 .cointainer{
-    
     width: 100%;
     height: 100%;
 
@@ -563,7 +645,7 @@ header a{
  }
 
   #dexscreener-embed{
-    padding-top: 100px;
+    padding-top: 0px;
     display: inline-block;
     position:relative;
     width:100%;
@@ -588,7 +670,8 @@ header a{
     }
 
 
-body
+
+    body
 {
   margin:0;
   padding:0;
@@ -667,3 +750,301 @@ body
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.scb{
+padding-top: 100px;
+padding-bottom: 0px;
+}
+.scb h2{
+    font-family: turtles;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    font-size: 70px;
+    padding-bottom: 2px;
+    text-shadow: -2px -2px 0 rgb(1, 41, 49),
+    2px -2px 0 rgba(1, 41, 49),
+    -2px 2px 0 rgba(1, 41, 49),
+    2px 2px 0 rgba(1, 41, 49),
+    -3px 0 0 rgba(1, 41, 49),
+    3px 0 0 rgba(1, 41, 49),
+    0 -3px 0 rgba(1, 41, 49),
+    0 3px 0 rgba(1, 41, 49);
+    text-transform: uppercase; 
+
+}
+
+.buy{
+    display: flex;
+    flex-direction: column;
+    overflow-x:hidden ;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+@media (min-width: 1000px){
+   .scb{
+    background-image: url(image.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+   } 
+
+}
+@media (min-width: 800px){
+    .scb{
+     background-image: url(image.webp);
+     background-repeat: no-repeat;
+     background-size: cover;
+    } 
+ .scb h2{
+    padding-bottom: 0;
+ }
+ }
+
+.wdw{
+        height: 400px;
+        width: 400px;
+        position: relative;
+        background-image: url(wdow1.svg);
+       background-repeat: no-repeat;
+       background-size: 100%;
+       overflow: hidden;
+       box-sizing: border-box;
+    
+    }
+#wdw{top: 50px;
+    left: 20px;
+}
+#wdw2{top: 0px;
+    right: 20px;
+}
+#wdw3{bottom: 20px;
+    left: 20px;
+}
+#wdw4{bottom: 20px;
+    right: 30px;
+}
+.hbuy{
+    font-family: sans-serif;
+        position: absolute;
+        top: 68px;
+        z-index: 100px;
+        font-size: 20px;
+        left: 50px;
+}
+.hbuy:hover{
+    color: #0cc0df;
+    transition: 0.2s;
+}
+#text3{
+    top: 55px;
+}
+#text1{
+    top: 90px;
+}
+#text2{
+    top: 80px;
+}
+#text4{
+    top: 90px;
+}
+.hbuy p{
+    width: 300px;
+    font-weight: 500;
+}
+.hbuy h5{
+    font-size: var(--step-3);
+}
+
+@media (min-width: 800px){
+    .scb h2{
+        background-position: 0;
+    }
+    .buy{
+        display: grid;
+       grid-template-columns: 1fr 1fr;
+        height:120vh;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+    .hbuy{
+        font-size: var(--step-1);
+        top: 200px;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .hbuy p{
+        height: 200px;
+    width: 320px;
+    font-size: 19px;
+    font-weight: 500;
+    position: relative;
+    top: 20px;
+  
+    }
+    .hbuy h5{
+      position: relative;
+      top: 20px;
+  
+    }
+   
+    #wdw{
+        left: 10px;
+        top: 50px;
+    }
+    
+    #wdw2{
+    }
+    
+    #wdw3{
+        left: 0px;
+        bottom: 100px;
+}
+#wdw4{
+    right: 30px;
+    bottom: 150px;
+}
+#text1{
+    top: 60px;
+    font-size: var(--step-1);
+    left: 30px;
+}
+#text2{
+    top: 60px;
+    font-size: var(--step-1);
+    left: 30px;
+}
+#text3{
+    top: 80px;
+    font-size: var(--step-1);
+    left: 30px;
+    width: 200px;
+}
+#text4{
+    top: 60px;
+    font-size: var(--step-1);
+    left: 30px;
+}
+}
+
+@media (min-width: 1600px){
+    .buy{
+        height: 600px;
+        top: 0px;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        padding-bottom: 200px;
+        padding-top: 0px;
+
+    }
+    .scb h2{
+        font-size: 100px;
+       padding-top: 150px;
+       padding-bottom: 200px;
+    }
+    #wdw{
+        left: 10px;
+        top: 50px;
+
+    }
+    
+    #wdw2{
+
+    }
+    
+    #wdw3{
+        left: 0px;
+        bottom: 100px;
+}
+#wdw4{
+    right: 30px;
+    bottom: 100px;
+}
+}
+.frame{
+    padding-top: 0;
+}
+.hbuy{
+    top: 30px;
+    font-size: var(--step-1);
+
+}
+.hbuy h5{
+    font-size: 20px;
+
+}
+#text1{
+    top: 60px;
+    font-size: var(--step-1);
+    left: 30px;
+}
+#text2{
+    top: 60px;
+    font-size: var(--step-1);
+    left: 30px;
+}
+#text3{
+    top: 50px;
+    font-size: var(--step-1);
+    left: 30px;
+    width: 200px;
+}
+#text4{
+    top: 60px;
+    font-size: var(--step-1);
+    left: 30px;
+}
+
+
+@media (min-width: 1600px){
+    .hbuy p{
+        font-size: 16px;
+        width: 300px;
+        font-weight: 500;
+    }
+    #text1{
+        top: 80px;
+        left: 40px;
+    }
+    #text2{
+        top: 80px;
+        left: 40px;
+    }
+    #text3{
+        top: 60px;
+        left: 40px;
+        width: 200px;
+    }
+    #text4{
+        top: 70px;
+        left: 40px;
+    }
+}
+
+@media (max-width: 800px){
+    .frame{
+        margin-top: 0px;
+    }
+    .scb{
+        background-image: url(Design\ ohne\ Titel.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
